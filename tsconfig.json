@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noEmitHelpers": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "typeRoots": [ "node_modules/@types/" ],
+  "types": [ "core-js", "jquery", "lodash", "jasmine", "moment-timezone"],
+  "exclude": ["node_modules", "bundle", "dist", "loaders"],
+  "awesomeTypescriptLoaderOptions": {
+    "forkChecker": true,
+    "useWebpackText": true // // Allows other loaders to be chained to awesome-typescript-loader.
+  }
+}

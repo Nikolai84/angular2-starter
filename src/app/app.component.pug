@@ -1,0 +1,11 @@
+header
+  nav
+    a([routerLink]="['']") Home
+    a([routerLink]="['about']") About
+main
+  h1 Hello from {{ api.title}}
+  <!-- Images (and assets) are parsed and loaded from within the public directory -->
+  img(src="/img/bike.jpg")
+  router-outlet
+footer
+  a(href="someLink") Footer

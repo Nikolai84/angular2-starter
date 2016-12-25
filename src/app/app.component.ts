@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 
-import { ApiService } from './shared';
-
 import '../style/app.scss';
 import * as $ from 'jquery';
 import * as moment from 'moment-timezone';
 import {find} from 'lodash';
+import {ApiService} from './modules/core/api.service';
 
 @Component({
-  selector: 'my-app', // <my-app></my-app>
+  selector: 'app', // <app></app>
   templateUrl: './app.component.pug',
   styleUrls: ['./app.component.scss'],
 })
@@ -19,6 +18,7 @@ export class AppComponent {
     console.log($);
     console.log(moment);
     console.log(find);
+    console.log(this.api);
     // Do something with api
   }
 }

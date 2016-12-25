@@ -90,7 +90,7 @@ module.exports = function makeWebpackConfig() {
       // Support for .ts files.
       {
         test: /\.ts$/,
-        loaders: ['awesome-typescript-loader?' + atlOptions, 'angular2-template-loader', '@angularclass/hmr-loader'],
+        loaders: ['awesome-typescript-loader?' + atlOptions, 'angular2-router-loader', 'angular2-template-loader', '@angularclass/hmr-loader'],
         exclude: [isTest ? /\.(e2e)\.ts$/ : /\.(spec|e2e)\.ts$/, /node_modules\/(?!(ng2-.+))/]
       },
 
@@ -130,7 +130,7 @@ module.exports = function makeWebpackConfig() {
       {test: /\.html$/, loader: 'raw-loader',  exclude: root('src', 'public')},
       {
         test: /\.pug$/, //?doctype=html @see http://stackoverflow.com/questions/38550280/jade-pug-with-angular-2-how-to-resolve-conflict-with-syntax
-        loader: 'html?attrs=img:src!pug-html-loader?doctype=html'
+        loader: 'html-loader?attrs=img:src!pug-html-loader?doctype=html'
       }
     ]
   };
@@ -185,7 +185,7 @@ module.exports = function makeWebpackConfig() {
          * Reference: https://github.com/wbuchwalter/tslint-loader
          */
         tslint: {
-          emitErrors: false,
+          emitErrors: true,
           failOnHint: false
         },
         /**
@@ -271,7 +271,7 @@ module.exports = function makeWebpackConfig() {
         log: true,
         plugins: [
           // Minify CSS file with source maps. That’s only
-          csswring({preservehacks: true, removeallcomments: true}),
+          csswring({preservehacks: true, removeallcomments: true})
         ]
       })
     );

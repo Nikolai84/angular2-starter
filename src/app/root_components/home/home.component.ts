@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+// @TODO should be named home.page.component
 
 @Component({
-  selector: 'my-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'hsp-home',
+  templateUrl: 'home.component.pug',
+  styleUrls: ['home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
